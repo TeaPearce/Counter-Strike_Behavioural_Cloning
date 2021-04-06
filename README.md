@@ -2,7 +2,7 @@
 ArXiv paper: Counter-Strike Deathmatch with Large-Scale Behavioural Cloning
 
 ## What's included
-We include a script to run (TO APPEAR SOON!)
+We include a script to run the trained agent (TO APPEAR SOON!). We list below the game settings we used when running the agent.
 
 ## What's not included
 We do not share the parts of the code used to scrape the large-scale dataset. There are several reasons for this -- 1) it contains code that can be easily modified for cheating purposes 2) the paper is not yet published and we are continuing to develop it ourselves.
