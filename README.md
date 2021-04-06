@@ -16,7 +16,7 @@ We do not share the parts of the code used to scrape the large-scale dataset. Th
 This repo can be used for personal projects and open-source research. We do not grant a license for its commercial use in any form. If in doubt, please contact us for permission.
 
 ## Maintenance
-This repo shares code used in research, used to provide some depth behind the paper. It's not production ready. It's unlikely to be robust across operating systems, python versions, python packages, future updates etc. I won't be actively maintaining this repo, nor responding to minor bugs.
+This repo shares code used in research, used to provide some depth behind the paper. It's not production ready. It's unlikely to be robust across operating systems, python versions, python packages, future CSGO updates etc. I won't be actively maintaining this repo for these purposes, nor responding to minor bugs.
 
 
 
