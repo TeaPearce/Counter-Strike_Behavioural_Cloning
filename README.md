@@ -1,6 +1,9 @@
 # Counter-Strike Deathmatch with Large-Scale Behavioural Cloning
 ArXiv paper: Counter-Strike Deathmatch with Large-Scale Behavioural Cloning
 
+<img width="600" src="intro_fig_dm.png">
+
+
 ## What's included
 We include a script to run the trained agent (TO APPEAR SOON!). We list below the game settings we used when running the agent.
 
