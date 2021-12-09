@@ -196,7 +196,7 @@ numpy: '1.18.5'
 OpenCV (cv2): '4.4.0'
 scipy: '1.4.1'
 
-add Windows ones here
+TODO: Windows packages here
 ```
 
 ### Hardware
