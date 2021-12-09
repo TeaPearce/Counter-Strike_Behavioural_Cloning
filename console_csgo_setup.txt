@@ -1,0 +1,149 @@
+# Easy and medium deathmatch mode can be initialised from the main menu 
+# (deathmatch→ play offline with bots → dust 2 → easy/medium bots → classic mode). 
+# Then run below commands (have to be run in several batches). 
+# Manually join terrorist team, and select AK47. 
+# Note there seems to be a fair amount of variability between the server difficulty
+# level even under this procedure (I spent a long time trying to debug why but couldn't :/)
+# So for proper testing, restart the server several times, or compare agents on the same server
+
+# make sure your game settings match those in appendix e
+# most important probably are mouse sensitivity=250 and raw input off
+
+# deathmatch easy mode, start from main menu -> practice with bots -> deathmatch -> classic mode -> dust II -> easy bots
+# join terrorist team, buy AK47
+
+sv_pausable 1;
+sv_cheats 1;
+mp_roundtime 6000;
+mp_teammates_are_enemies 0;
+bot_kick;
+
+sv_auto_adjust_bot_difficulty "0";
+contributionscore_assist "0";
+contributionscore_kill "0";
+mp_autoteambalance "0";
+mp_limitteams "30";
+bot_difficulty "0";
+sv_infinite_ammo "1";
+
+bot_pistols_only 1;
+bot_difficulty 0;
+sv_auto_adjust_bot_difficulty 0;
+contributionscore_assist 0;
+contributionscore_kill 0;
+fps_max 64;
+
+mp_restartgame 1;
+
+# rebuy AK47 if needed
+
+bot_add ct easy;
+bot_add ct easy;
+bot_add ct easy;
+bot_add ct easy;
+bot_add ct easy;
+bot_add ct easy;
+
+bot_add ct easy;
+bot_add ct easy;
+bot_add ct easy;
+bot_add ct easy;
+bot_add ct easy;
+bot_add ct easy;
+
+bot_add t easy;
+bot_add t easy;
+bot_add t easy;
+bot_add t easy;
+bot_add t easy;
+bot_add t easy;
+
+bot_add t easy;
+bot_add t easy;
+bot_add t easy;
+bot_add t easy;
+bot_add t easy;
+
+
+
+
+# deathmatch medium mode, start from main menu -> practice with bots -> deathmatch -> classic mode -> dust II -> medium bots
+# join terrorist team, buy AK47
+
+sv_pausable 1;
+sv_cheats 1;
+mp_roundtime 6000;
+mp_teammates_are_enemies 0;
+bot_kick;
+
+sv_auto_adjust_bot_difficulty "0";
+contributionscore_assist "0";
+contributionscore_kill "0";
+mp_autoteambalance "0";
+mp_limitteams "30";
+bot_difficulty "1";
+sv_infinite_ammo "2";
+
+bot_difficulty 1;
+sv_auto_adjust_bot_difficulty 0;
+contributionscore_assist 0;
+contributionscore_kill 0;
+fps_max 64;
+
+mp_restartgame 1;
+
+# rebuy AK47 if needed
+
+bot_add ct fair;
+bot_add ct fair;
+bot_add ct fair;
+bot_add ct fair;
+bot_add ct fair;
+bot_add ct fair;
+
+bot_add ct fair;
+bot_add ct fair;
+bot_add ct fair;
+bot_add ct fair;
+bot_add ct fair;
+bot_add ct fair;
+
+bot_add t fair;
+bot_add t fair;
+bot_add t fair;
+bot_add t fair;
+bot_add t fair;
+bot_add t fair;
+
+bot_add t fair;
+bot_add t fair;
+bot_add t fair;
+bot_add t fair;
+bot_add t fair;
+
+
+
+
+# aim train mode
+map workshop\368026786\aimtraindriving_v3 
+# (or start via menu)
+
+# join ct team
+
+sv_pausable 1;
+sv_cheats 1;
+god;
+give weapon_ak47; 
+
+# make sure god is no (it toggles)
+
+sv_auto_adjust_bot_difficulty "0";
+contributionscore_assist "0";
+contributionscore_kill "0";
+mp_autoteambalance "0";
+mp_limitteams "30";
+bot_difficulty "0";
+sv_infinite_ammo "1";
+
+bot_knives_only 0;
+mp_restartgame 1;
