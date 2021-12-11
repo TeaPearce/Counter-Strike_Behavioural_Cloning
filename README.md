@@ -6,7 +6,7 @@ Four minute introduction video: https://youtu.be/rnz3lmfSHv0
 Gameplay examples: https://youtu.be/KTY7UhjIMm4  
 
 
-<img width="500" src="NN_overview.PNG">
+<img width="500" src="NN_overview.png">
 
 
 
