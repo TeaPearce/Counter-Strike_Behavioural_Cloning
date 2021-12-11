@@ -6,7 +6,7 @@ Four minute introduction video: https://youtu.be/rnz3lmfSHv0
 Gameplay examples: https://youtu.be/KTY7UhjIMm4  
 
 
-<img width="500" src="NN_overview.png">
+<img width="500" src="NN_overview.PNG">
 
 
 
@@ -195,8 +195,8 @@ h5py: '2.10.0'
 numpy: '1.18.5'
 OpenCV (cv2): '4.4.0'
 scipy: '1.4.1'
-
-TODO: Windows packages here
+ctypes: '1.1.0'
+json: '2.0.9'
 ```
 
 ### Hardware

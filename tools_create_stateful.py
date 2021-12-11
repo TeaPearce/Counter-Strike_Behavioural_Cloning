@@ -29,12 +29,11 @@ from config import *
 
 # save_dir = 'F:/02_saved_models_hdd'
 # save_dir = 'C:/Users/Tim Pearce/Google Drive/Google Drive all/05. misc geeky/03_csgo_bot/02_remotemodels' # load model from here
-save_dir = 'H:/My Drive/Google Drive all/05. misc geeky/03_csgo_bot/02_remotemodels' # load model from here
-save_dir = 'F:/2021/01_remotemodels_overflow' # load model from here
+save_dir = 'G:/My Drive/Google Drive all/11. Sharing/csgo_models/' # load model from here
 save_dir_overflow = 'F:/2021/01_remotemodels_overflow' # save stateful model to here
 
 # list of model names to convert to stateful version
-model_names = ['July_remoterun7_g9_4k_n32_recipe_ton96__f16']
+model_names = ['ak47_sub_55k_drop_d4']
 # model_names = ['ak47_only_55k_b4_dmexpert_8']
 # model_names += ['ak47_only_55k_b4_dmexpert_12']
 # model_names += ['ak47_only_55k_b4_dmexpert_16']
@@ -56,8 +55,9 @@ for weights_name in model_names:
 
             intermediate_model= Model(inputs=base_model.input, outputs=base_model.layers[161].output)
 
-            input_1 = Input(shape=input_shape_batch,name='main_in')
+            input_1 = Input(batch_shape=input_shape_batch,name='main_in')
             x = TimeDistributed(intermediate_model)(input_1)
+
         else:
             input_shape_batch = (1, 1,csgo_img_dimension[0],csgo_img_dimension[1],3)
             input_shape_lowres = (N_TIMESTEPS,100,187,3)
