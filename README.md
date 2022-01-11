@@ -17,11 +17,10 @@ Gameplay examples: https://youtu.be/KTY7UhjIMm4
 1. [Code Overview](#code-overview)
 2. [Trained Models](#trained-models)
 3. [Datasets](#datasets)
-4. [Trained Models](#trained-models)
-5. [Requirements](#requirements)
-6. [License](#license)
-7. [Disclaimer](#disclaimer)
-8. [Maintenance](#maintenance)
+4. [Requirements](#requirements)
+5. [License](#license)
+6. [Disclaimer](#disclaimer)
+7. [Maintenance](#maintenance)
 
 
 ## Code Overview
