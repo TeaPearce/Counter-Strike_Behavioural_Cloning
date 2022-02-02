@@ -21,6 +21,7 @@ Gameplay examples: https://youtu.be/KTY7UhjIMm4
 5. [License](#license)
 6. [Disclaimer](#disclaimer)
 7. [Maintenance](#maintenance)
+8. [Trouble Shooting](#trouble-shooting)
 
 
 ## Code Overview
@@ -222,6 +223,36 @@ Whilst our code is not intended for cheating/hacking purposes, it's possible tha
 
 ## Maintenance
 This repo shares code used for _academic research_. It's not production ready. It's unlikely to be robust across operating systems, python versions, python packages, future CSGO updates etc. There's no plan to actively maintain this repo for these purposes, nor to fix minor bugs. If you'd like to help out with this, please reach out.
+
+
+## Trouble Shooting
+A few tips that might help get the agent working on your local system.
+- Ensure you've matched the game settings as per the paper appendix:
+
+    - Game resolution: 1024×768 (windowed mode)
+    - Mouse sensitivity: 2.50
+    - Mouse raw input: Off (<-important!)
+    - Crosshair settings: Classic static, green – RGB: (46, 250, 42), length 4.3, thickness 1.8, gap 2.0, no outline, no centre dot. (Length 2.8 also used in some training data and demos.)
+    - (Or use crosshair code: CSGO-UKcZG-QN8eW-WQMvd-NX6xr-RPqRP)
+    - All graphics options: Lowest quality setting
+    - Clear decals is bound to ‘n’ key (https://www.skinwallet.com/csgo/clear-decals-csgo/)
+
+- Ensure the code can find your game window -- e.g. one user had to edit ```dm_run_agent.py``` to
+```hwin_csgo = win32gui.FindWindow(None,'Counter-Strike: Global Offensive - Direct3D 9')```
+- Running ```screen_input.py```  directly should test whether screenshots are being captured correctly
+- Hardcode some actions in ```dm_run_agent.py``` to see if they have desired effect, e.g. set ```mouse_x_smooth``` to a constant, does the agent spin? Try similar for ```Lclicks``` and ```keys_pressed```
+- One user had to include in ```dm_run_agent.py```:
+```
+import win32com.client
+shell = win32com.client.Dispatch("WScript.Shell")
+shell.SendKeys('%')
+```
+- Setting ```IS_DEMO=True``` in ```dm_run_agent.py``` should display the input received by the agent which might highlight issues
+- Is the agent processing the actions quickly enough? -- uncomment ```print('arrived later than wanted to :/, took ',round(time.time() - loop_start_time,4))``` in ```config.py``` to display warnings. Is the GPU being used by the neural net?
+- Restrict CSGO's frame rate to free up some resources, e.g. run the CSGO console command ```fps_max 64;```.
+- The mouse will appear quite stilted when you watch in real time -- actions are only applied 16 (or 32 if ```IS_SPLIT_MOUSE=True``` ) times per second
+
+
 
 
 
