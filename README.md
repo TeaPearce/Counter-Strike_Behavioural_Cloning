@@ -226,22 +226,30 @@ This repo shares code used for _academic research_. It's not production ready. I
 
 
 ## Trouble Shooting
-A few tips that might help get the agent working on your local system.
+A few tips that might help get the agent working on your local system (with thanks to  Mert Can Çakmak https://github.com/Mccakmak).
 - Ensure you've matched the game settings as per the paper appendix:
 
-    - Game resolution: 1024×768 (windowed mode)
+    - Game resolution: Normal 4:3, 1024×768, windowed
     - Mouse sensitivity: 2.50
-    - Mouse raw input: Off (<-important!)
+    - Mouse raw input: Off
+    - Reverse mouse: Off
+    - Mouse acceleration: Off
     - Crosshair settings: Classic static, green – RGB: (46, 250, 42), length 4.3, thickness 1.8, gap 2.0, no outline, no centre dot. (Length 2.8 also used in some training data and demos.)
     - (Or use crosshair code: CSGO-UKcZG-QN8eW-WQMvd-NX6xr-RPqRP)
     - All graphics options: Lowest quality setting
+    - Boost Player Contrast: Enabled
+    - Multisampling AA Mode: 2x MSAA
+    - HUD edge positions: as large as possible
+    - HUD scale: 0.56
+    - HUD color: Default
+    - Radar HUD size: 0.80
     - Clear decals is bound to ‘n’ key (https://www.skinwallet.com/csgo/clear-decals-csgo/)
 
 - Ensure the code can find your game window -- e.g. one user had to edit ```dm_run_agent.py``` to
 ```hwin_csgo = win32gui.FindWindow(None,'Counter-Strike: Global Offensive - Direct3D 9')```
 - Running ```screen_input.py```  directly should test whether screenshots are being captured correctly
 - Hardcode some actions in ```dm_run_agent.py``` to see if they have desired effect, e.g. set ```mouse_x_smooth``` to a constant, does the agent spin? Try similar for ```Lclicks``` and ```keys_pressed```
-- One user had to include in ```dm_run_agent.py```:
+- One user had to include at top of ```dm_run_agent.py```:
 ```
 import win32com.client
 shell = win32com.client.Dispatch("WScript.Shell")
@@ -253,6 +261,17 @@ shell.SendKeys('%')
 - The mouse will appear quite stilted when you watch in real time -- actions are only applied 16 (or 32 if ```IS_SPLIT_MOUSE=True``` ) times per second
 
 
+- View model settings:
+    - cl_righthand 1
+    - viewmodel_offset_x 1
+    - viewmodel_offset_y 1
+    - viewmodel_offset_z  -1
+    - viewmodel_fov 60
+    - cl_bobamt_lat 0.33
+    - cl_bobamt_vert 0.14
+    - cl_bobcycle 0.98
+    - cl_viewmodel_shift_left_amt 1.5
+    - cl_viewmodel_shift_right_amt 0.75
 
 
 
