@@ -46,7 +46,8 @@ from config import *
 # select the game window
 print('selecting the game window...')
 hwin_orig = win32gui.GetForegroundWindow() # remember original window
-hwin_csgo = win32gui.FindWindow(None,'Counter-Strike: Global Offensive')
+# hwin_csgo = win32gui.FindWindow(None,'Counter-Strike: Global Offensive')
+hwin_csgo = win32gui.FindWindow(None,'Counter-Strike: Global Offensive - Direct3d 9') # as of Feb 2022
 win32gui.SetForegroundWindow(hwin_csgo)
 time.sleep(1)
 
