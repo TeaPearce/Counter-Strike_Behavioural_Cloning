@@ -21,7 +21,7 @@ Gameplay examples: https://youtu.be/KTY7UhjIMm4
 5. [License](#license)
 6. [Disclaimer](#disclaimer)
 7. [Maintenance](#maintenance)
-8. [Trouble Shooting](#trouble-shooting)
+8. [Troubleshooting](#troubleshooting)
 
 
 ## Code Overview
@@ -225,7 +225,7 @@ Whilst our code is not intended for cheating/hacking purposes, it's possible tha
 This repo shares code used for _academic research_. It's not production ready. It's unlikely to be robust across operating systems, python versions, python packages, future CSGO updates etc. There's no plan to actively maintain this repo for these purposes, nor to fix minor bugs. If you'd like to help out with this, please reach out.
 
 
-## Trouble Shooting
+## Troubleshooting
 A few tips that might help get the agent working on your local system (with thanks to  Mert Can Çakmak https://github.com/Mccakmak).
 - Ensure you've matched the game settings used. Particularly important are resolution and mouse settings:
 
