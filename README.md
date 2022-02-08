@@ -227,7 +227,7 @@ This repo shares code used for _academic research_. It's not production ready. I
 
 ## Trouble Shooting
 A few tips that might help get the agent working on your local system (with thanks to  Mert Can Çakmak https://github.com/Mccakmak).
-- Ensure you've matched the game settings as per the paper appendix:
+- Ensure you've matched the game settings used. Particularly important are resolution and mouse settings:
 
     - Game resolution: Normal 4:3, 1024×768, windowed
     - Mouse sensitivity: 2.50
@@ -245,23 +245,8 @@ A few tips that might help get the agent working on your local system (with than
     - Radar HUD size: 0.80
     - Clear decals is bound to ‘n’ key (https://www.skinwallet.com/csgo/clear-decals-csgo/)
 
-- Ensure the code can find your game window -- e.g. one user had to edit ```dm_run_agent.py``` to
-```hwin_csgo = win32gui.FindWindow(None,'Counter-Strike: Global Offensive - Direct3D 9')```
-- Running ```screen_input.py```  directly should test whether screenshots are being captured correctly
-- Hardcode some actions in ```dm_run_agent.py``` to see if they have desired effect, e.g. set ```mouse_x_smooth``` to a constant, does the agent spin? Try similar for ```Lclicks``` and ```keys_pressed```
-- One user had to include at top of ```dm_run_agent.py```:
-```
-import win32com.client
-shell = win32com.client.Dispatch("WScript.Shell")
-shell.SendKeys('%')
-```
-- Setting ```IS_DEMO=True``` in ```dm_run_agent.py``` should display the input received by the agent which might highlight issues
-- Is the agent processing the actions quickly enough? -- uncomment ```print('arrived later than wanted to :/, took ',round(time.time() - loop_start_time,4))``` in ```config.py``` to display warnings. Is the GPU being used by the neural net?
-- Restrict CSGO's frame rate to free up some resources, e.g. run the CSGO console command ```fps_max 64;```.
-- The mouse will appear quite stilted when you watch in real time -- actions are only applied 16 (or 32 if ```IS_SPLIT_MOUSE=True``` ) times per second
+- You may also want to match the view model settings used in the paper (probably less important):
 
-
-- View model settings:
     - cl_righthand 1
     - viewmodel_offset_x 1
     - viewmodel_offset_y 1
@@ -272,6 +257,24 @@ shell.SendKeys('%')
     - cl_bobcycle 0.98
     - cl_viewmodel_shift_left_amt 1.5
     - cl_viewmodel_shift_right_amt 0.75
+
+- Ensure the code can find your game window -- e.g. as of Feb 2022 the window was renamed, so you should use
+```hwin_csgo = win32gui.FindWindow(None,'Counter-Strike: Global Offensive - Direct3D 9')```
+- Run ```screen_input.py```  directly to test whether screenshots are being captured correctly
+- Hardcode some actions in ```dm_run_agent.py``` to see if they have desired effect, e.g. set ```mouse_x_smooth``` to a small constant, does the agent spin? Try similar for ```Lclicks``` and ```keys_pressed```
+- One user reported having to include at top of ```dm_run_agent.py```:
+```
+import win32com.client
+shell = win32com.client.Dispatch("WScript.Shell")
+shell.SendKeys('%')
+```
+- Setting ```IS_DEMO=True``` in ```dm_run_agent.py``` should display the input received by the agent and action selection visualisations, which might highlight issues
+- Is the agent processing the actions quickly enough? -- uncomment ```print('arrived later than wanted to :/, took ',round(time.time() - loop_start_time,4))``` in ```config.py``` to display warnings. Is the GPU being used by the neural net?
+- Restrict CSGO's frame rate to free up some resources, e.g. run the CSGO console command ```fps_max 64;```.
+- The mouse will appear quite stilted when you watch in real time -- actions are only applied 16 (or 32 if ```IS_SPLIT_MOUSE=True``` ) times per second
+- It's been reported more recent combinations of Python (v3.9) and tensorflow (v4.5) lead to different predictions by the neural network (suspected due to differences in the way the model is loaded). It should work mormally with Python v3.6.8 or v3.6.9 and tensorflow v2.3.0.
+
+
 
 
 
