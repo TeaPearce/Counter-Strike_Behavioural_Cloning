@@ -272,7 +272,7 @@ shell.SendKeys('%')
 - Is the agent processing the actions quickly enough? -- uncomment ```print('arrived later than wanted to :/, took ',round(time.time() - loop_start_time,4))``` in ```config.py``` to display warnings. Is the GPU being used by the neural net?
 - Restrict CSGO's frame rate to free up some resources, e.g. run the CSGO console command ```fps_max 64;```.
 - The mouse will appear quite stilted when you watch in real time -- actions are only applied 16 (or 32 if ```IS_SPLIT_MOUSE=True``` ) times per second
-- It's been reported more recent combinations of Python (v3.9) and tensorflow (v4.5) lead to different predictions by the neural network (suspected due to differences in the way the model is loaded). It should work mormally with Python v3.6.8 or v3.6.9 and tensorflow v2.3.0.
+- It's been reported more recent combinations of Python (v3.9) and tensorflow (v2.4.5) lead to different predictions by the neural network (suspected due to differences in the way the model is loaded). It should work mormally with Python v3.6.8 or v3.6.9 and tensorflow v2.3.0.
 
 
 
