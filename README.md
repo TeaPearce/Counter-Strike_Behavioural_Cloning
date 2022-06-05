@@ -1,6 +1,6 @@
 # Counter-Strike Deathmatch with Large-Scale Behavioural Cloning
 [Tim Pearce](https://twitter.com/Tea_Pearce), [Jun Zhu](https://ml.cs.tsinghua.edu.cn/~jun/index.shtml)  
-Offline RL workshop, NeurIPS 2021  
+Presented at IEEE Conference on Games (CoG) 2022, and Offline RL workshop, NeurIPS 2021 
 Paper: https://arxiv.org/abs/2104.04258  
 Four minute introduction video: https://youtu.be/rnz3lmfSHv0  
 Gameplay examples: https://youtu.be/KTY7UhjIMm4  
