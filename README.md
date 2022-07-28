@@ -99,7 +99,7 @@ Download link: https://drive.google.com/drive/folders/11n5Nxj6liSXKP6_vl-FjwfRHt
 
 ## Datasets
 
-For access to all datasets, please email the first author (tp424 at cam dot ac dot uk) with the title 'csgo dataset access' and a one sentence summary of how you intend to use the data. The email address you send from will be granted access to the cloud account. A brief description of dataset and directory structure is given below.
+For access to all datasets, please email the first author (tim dot pearce at microsoft dot com, where dot = . and at = @) with the title 'csgo dataset access' and a one sentence summary of how you intend to use the data. The email address you send from will be granted access to the cloud account. A brief description of dataset and directory structure is given below.
 
 - ```dataset_dm_scraped_dust2/hdf5_dm_july2021_*.hdf5```
     - total files: 5500
@@ -273,9 +273,5 @@ shell.SendKeys('%')
 - Restrict CSGO's frame rate to free up some resources, e.g. run the CSGO console command ```fps_max 64;```.
 - The mouse will appear quite stilted when you watch in real time -- actions are only applied 16 (or 32 if ```IS_SPLIT_MOUSE=True``` ) times per second
 - It's been reported more recent combinations of Python (v3.9) and tensorflow (v2.4.5) lead to different predictions by the neural network (suspected due to differences in the way the model is loaded). It should work mormally with Python v3.6.8 or v3.6.9 and tensorflow v2.3.0.
-
-
-
-
 
 
