@@ -6,7 +6,9 @@ Four minute introduction video: https://youtu.be/rnz3lmfSHv0
 Gameplay examples: https://youtu.be/KTY7UhjIMm4  
 
 
-<img height="200" src="gameplay_gif_01.gif"><img height="200" src="NN_overview.png">
+<img height="200" src="gif_data_01.gif"><img height="200" src="gif_gameplay_01.gif">
+
+<img height="200" src="NN_overview.png">
 
 
 [comment]: <> (Previous version of agent: https://youtu.be/p01vWk7uMvM)
