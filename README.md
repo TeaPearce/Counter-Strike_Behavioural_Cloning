@@ -106,6 +106,7 @@ All datasets are available at: https://1drv.ms/u/s!AjG1JlThUkPgh1JEIxETxvaphzgC?
     - map: dust2
     - gamemode: deathmatch
     - source: scraped from online servers
+    - UPDATE: these files have been shifted to ```dataset_dm_scraped_dust2_tars/``` in 200 file chunks to make downloading from onedrive less painful.
 
 - ```dataset_dm_expert_dust2/hdf5_dm_july2021_expert_*.hdf5```
     - total files: 190
