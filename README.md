@@ -1,7 +1,8 @@
 # Counter-Strike Deathmatch with Large-Scale Behavioural Cloning
 [Tim Pearce](https://twitter.com/Tea_Pearce), [Jun Zhu](https://ml.cs.tsinghua.edu.cn/~jun/index.shtml)  
 IEEE Conference on Games (CoG) 2022 [⭐️ Best Paper Award!]. Also presented at Offline RL workshop, NeurIPS 2021  
-Paper: https://arxiv.org/abs/2104.04258  
+ArXiv paper: https://arxiv.org/abs/2104.04258 (Contains some extra experiments not in CoG version)  
+CoG paper: https://ieee-cog.org/2022/assets/papers/paper_45.pdf  
 Four minute introduction video: https://youtu.be/rnz3lmfSHv0  
 Gameplay examples: https://youtu.be/KTY7UhjIMm4  
 
