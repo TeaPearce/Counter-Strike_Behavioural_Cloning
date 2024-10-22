@@ -99,6 +99,8 @@ Models can be downloaded at (under ```/trained_models``` folder): https://1drv.m
 
 ## Datasets
 
+[Update 22 Oct 2024] With the renewed interest in the dataset from the diffusion world models paper, the OneDrive account was being throttled and not allowing access for many who wanted to download. I'm moving the dataset here: https://huggingface.co/datasets/TeaPearce/CounterStrike_Deathmatch/tree/main . This is currently in progress -- I'll be prioritizing the files originally under ```dataset_dm_scraped_dust2_tars'''.
+
 All datasets are available at: https://1drv.ms/u/s!AjG1JlThUkPgh1JEIxETxvaphzgC?e=2AJfA3 . (Please email ```tim dot pearce at microsoft dot com``` with any issues.) A brief description of dataset and directory structure is given below. 
 
 - ```dataset_dm_scraped_dust2/hdf5_dm_july2021_*.hdf5```
