@@ -24,7 +24,7 @@ def update_offsets(raw):
     raw = raw.replace('[netvars]','#netvars\n')
     try:
         open('dm_hazedumper_offsets.py','w').write(raw)
-        print('updated succesfuly')
+        print('updated successfully')
     except:
         print('couldnt open offsets.py to preform update')
     return
